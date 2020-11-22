@@ -24,7 +24,8 @@
   },
   "dependencies": {},
   "peerDependencies": {
-    "react": "16.x"
+    "react": "16.13.x",
+    "react-native": "0.63.x"
   },
   "devDependencies": {
     "@babel/core": "^7.12.7",
@@ -32,11 +33,17 @@
     "@storybook/addon-essentials": "^6.1.2",
     "@storybook/addon-links": "^6.1.2",
     "@storybook/react": "^6.1.2",
+    "@types/react": "^16.14.1",
+    "@types/react-native": "^0.63.36",
     "babel-loader": "^8.2.1",
+    "babel-plugin-module-resolver": "^4.0.0",
     "chromatic": "^5.4.0",
     "nwb": "0.25.x",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-native": "0.63.3",
+    "react-native-web": "0.14.8",
+    "typescript": "^3"
   },
   "author": "",
   "homepage": "",
@@ -44,5 +51,20 @@
   "repository": "",
   "keywords": [
     "react-component"
-  ]
+  ],
+  "babel": {
+    "plugins": [
+      [
+        "module-resolver",
+        {
+          "alias": {
+            "^react-native$": "react-native-web"
+          }
+        }
+      ]
+    ]
+  },
+  "jest": {
+    "preset": "react-native-web"
+  }
 }
