@@ -52,18 +52,6 @@
   "keywords": [
     "react-component"
   ],
-  "babel": {
-    "plugins": [
-      [
-        "module-resolver",
-        {
-          "alias": {
-            "^react-native$": "react-native-web"
-          }
-        }
-      ]
-    ]
-  },
   "jest": {
     "preset": "react-native-web"
   }
